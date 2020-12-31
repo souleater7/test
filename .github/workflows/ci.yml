@@ -19,8 +19,8 @@ jobs:
         vcpkgGitCommitId: HEAD
     # Now that vcpkg is installed, it is being used to run with the desired arguments.
     - run: |
-        %VCPKG_ROOT%/vcpkg install zlib
-        %VCPKG_ROOT%/vcpkg export zlib --zip --output=bottle
+        vcpkg install zlib
+        vcpkg export zlib --zip --output=bottle --output-dir=${{github.workspace}}
       shell: cmd
     - uses: actions/upload-artifact@v2
       with:
