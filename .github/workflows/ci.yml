@@ -15,6 +15,7 @@ jobs:
       with:
         setupOnly: true
         vcpkgGitCommitId: HEAD
+        vcpkgTriplet: x64-windows
     # Now that vcpkg is installed, it is being used to run with the desired arguments.
     - run: |
         %VCPKG_ROOT%/vcpkg install zlib
