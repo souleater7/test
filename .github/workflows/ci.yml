@@ -14,6 +14,7 @@ jobs:
       uses: lukka/run-vcpkg@v6
       with:
         setupOnly: true
+        vcpkgGitCommitId: HEAD
     # Now that vcpkg is installed, it is being used to run with the desired arguments.
     - run: |
         %VCPKG_ROOT%/vcpkg help
