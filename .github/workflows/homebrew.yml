@@ -1,0 +1,15 @@
+name: Homebrew
+
+on:
+  workflow_dispatch:
+    inputs:
+      package:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - run: |
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
