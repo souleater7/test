@@ -7,5 +7,5 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: rm -rf /home/linuxbrew
+      - run: rm -rf /home/linuxbrew/.linuxbrew
       - run: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
